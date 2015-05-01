@@ -13,8 +13,8 @@ import sys
 INPUT_ENCODING = "windows-1255"
 OUTPUT_ENCODING = "windows-1255"
 
-prefixPunctuation = { '-', '.', '?', '!', ',', '"', ':' }
-suffixPunctuation = { '-', '.', '?', '!', ',', '"', ':' }
+prefixPunctuation = { '-', '.', '?', '!', ',', '"', ':', ';' }
+suffixPunctuation = { '-', '.', '?', '!', ',', '"', ':', ';' }
 styleTags = {'<i>', '<b>', '</i>', '</b>'}
 
 def calcOutputFileName(filename):
@@ -62,7 +62,6 @@ def fixStyleTags(line):
         else:
             # split by end tag
             line = line[:-4]    
-#             line += styleEnd    
         
     return line, styleStart, styleEnd
 
